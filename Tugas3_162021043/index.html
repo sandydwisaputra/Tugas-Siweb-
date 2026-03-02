@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Preferensi Warna</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="p-4">
+
+<h1 class="mb-4">Preferensi Warna</h1>
+
+<fieldset>
+  <legend>Warna</legend>
+
+  <p>
+    1. Warna latarbelakang
+    <span id="bgPreview" class="color-box" style="background:#1839a7;"></span>
+  </p>
+
+  <p>
+    2. Warna teks
+    <span id="textPreview" class="color-box" style="background:red;"></span>
+  </p>
+</fieldset>
+
+<button class="btn btn-secondary mt-3" onclick="applyColor()">Simpan</button>
+
+<div class="modal fade" id="colorModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title">Pilih Warna</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body text-center">
+        <div class="mb-3">
+          <div class="palette-color" style="background:#0d6efd" onclick="selectPalette('#0d6efd')"></div>
+          <div class="palette-color" style="background:#dc3545" onclick="selectPalette('#dc3545')"></div>
+          <div class="palette-color" style="background:#198754" onclick="selectPalette('#198754')"></div>
+          <div class="palette-color" style="background:#ffc107" onclick="selectPalette('#ffc107')"></div>
+          <div class="palette-color" style="background:#212529" onclick="selectPalette('#212529')"></div>
+          <div class="palette-color" style="background:#6f42c1" onclick="selectPalette('#6f42c1')"></div>
+          <div class="palette-color" style="background:#20c997" onclick="selectPalette('#20c997')"></div>
+          <div class="palette-color" style="background:#fd7e14" onclick="selectPalette('#fd7e14')"></div>
+        </div>
+        <hr>
+
+        <input type="color" id="colorPicker" class="form-control form-control-color mx-auto" value="#ffffff">
+
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" onclick="saveColor()">Pilih</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

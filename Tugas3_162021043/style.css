@@ -1,0 +1,47 @@
+body {
+  background-color: #1839a7;
+  color: red;
+  transition: 0.4s ease-in-out;
+}
+
+.color-box {
+  width: 60px;
+  height: 30px;
+  border-radius: 6px;
+  border: 3px solid #ccc;
+  cursor: pointer;
+  display: inline-block;
+  margin-left: 10px;
+  transition: 0.3s;
+}
+
+.color-box:hover {
+  transform: scale(1.05);
+}
+
+.palette-color {
+  width: 35px;
+  height: 35px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: inline-block;
+  margin: 5px;
+  border: 2px solid #ddd;
+  transition: 0.2s;
+}
+
+.palette-color:hover {
+  transform: scale(1.15);
+}
+
+fieldset {
+  border: 2px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+legend {
+  width: auto;
+  padding: 0 10px;
+  font-weight: bold;
+}
